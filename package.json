@@ -1,0 +1,35 @@
+{
+  "name": "frontie",
+  "version": "0.0.0",
+  "description": "Frontend Components Monorepo",
+  "packageManager": "bun@1.0.30",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/zbiljic/frontie.git",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "biome:check": "biome check *",
+    "biome:format": "biome format --write *",
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "stylelint": "stylelint \"**/*.css\" --cache",
+    "syncpack": "syncpack list-mismatches",
+    "syncpack:format": "syncpack format",
+    "syncpack:update": "syncpack update",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "stylelint": "16.2.1",
+    "stylelint-config-standard-scss": "13.0.0",
+    "syncpack": "12.3.0",
+    "turbo": "1.12.5"
+  }
+}

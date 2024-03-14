@@ -19,6 +19,7 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "lint": "turbo run lint",
+    "prepare": "husky",
     "stylelint": "stylelint \"**/*.css\" --cache",
     "syncpack": "syncpack list-mismatches",
     "syncpack:format": "syncpack format",
@@ -27,6 +28,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.1",
+    "@commitlint/cli": "19.1.0",
+    "@commitlint/config-conventional": "19.1.0",
+    "husky": "9.0.11",
     "stylelint": "16.2.1",
     "stylelint-config-standard-scss": "13.0.0",
     "syncpack": "12.3.0",

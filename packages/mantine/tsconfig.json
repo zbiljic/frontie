@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@frontie/mantine/*": ["./src/*"]
+    },
+    "types": ["bun-types"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

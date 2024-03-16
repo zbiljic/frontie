@@ -13,7 +13,9 @@
     "packages/*"
   ],
   "scripts": {
+    "biome:apply": "biome check --apply *",
     "biome:check": "biome check *",
+    "biome:ci": "biome ci *",
     "biome:format": "biome format --write *",
     "build": "turbo run build",
     "clean": "turbo run clean",

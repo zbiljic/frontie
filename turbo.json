@@ -21,6 +21,7 @@
         "test/**/*.tsx"
       ],
       "outputs": []
-    }
+    },
+    "typecheck": {}
   }
 }

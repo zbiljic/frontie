@@ -24,7 +24,8 @@
     "syncpack": "syncpack list-mismatches",
     "syncpack:format": "syncpack format",
     "syncpack:update": "syncpack update",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.1",

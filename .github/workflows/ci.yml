@@ -38,3 +38,18 @@ jobs:
 
       - name: Check linting
         run: bun run biome:ci
+
+  unit-tests:
+    name: Run Unit Tests
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use local setup-bun action
+        uses: ./.github/actions/setup-bun
+
+      - name: Run tests
+        run: bun run test

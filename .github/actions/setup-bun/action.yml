@@ -1,0 +1,42 @@
+name: Setup Bun
+description: Setup Bun version as required by the repo. Must be called after checkout with submodules.
+runs:
+  using: composite
+  steps:
+    - name: Get Bun version from package.json
+      shell: bash
+      run: |
+        echo "BUN_VERSION=$(cat package.json | grep packageManager | head -1 | awk -F: '{ print $2 }' | sed 's/[,"bun@]//g')" >> ${GITHUB_ENV}
+
+    - name: Install bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: ${{ env.BUN_VERSION }}
+
+    - name: Get bun cache directory path
+      id: bun-cache-dir-path
+      shell: bash
+      run: echo "dir=$(bun pm cache)" >> "$GITHUB_OUTPUT"
+
+    - name: Cache node modules
+      id: bun-cache
+      uses: actions/cache@v4
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ${{ steps.bun-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-bun-${{ env.cache-name }}-${{ hashFiles('**/bun.lockb') }}
+        restore-keys: |
+          ${{ runner.os }}-bun-${{ env.cache-name }}-
+          ${{ runner.os }}-bun-
+          ${{ runner.os }}-
+
+    - if: ${{ steps.bun-cache.outputs.cache-hit != 'true' }}
+      name: List the state of node modules
+      continue-on-error: true
+      shell: bash
+      run: bun pm ls
+
+    - name: Install dependencies
+      shell: bash
+      run: bun install --frozen-lockfile

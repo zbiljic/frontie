@@ -27,33 +27,26 @@
       "datasourceTemplate": "npm",
       "depNameTemplate": "bun",
       "depTypeTemplate": "action",
-      "fileMatch": [
-        "(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$",
-        "(^|/)action\\.ya?ml$",
-        "(^|/)(\\.(?:github|gitea|forgejo))/renovate\\.json$"
-      ],
-      "matchStrings": [
-        "bun-version\\:\\s*(?<currentValue>.*)\\s",
-        "BUN_VERSION\\=v(?<currentValue>.*)\\s&&"
-      ],
+      "fileMatch": ["(^|/)(\\.(?:github|gitea|forgejo))/renovate\\.json$"],
+      "matchStrings": ["BUN_VERSION\\=v(?<currentValue>.*)\\s&&"],
       "versioningTemplate": "npm"
     }
   ],
   "packageRules": [
-		{
+    {
       "description": "Automerge non-major updates",
-			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-			"automerge": true,
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
       "automergeStrategy": "rebase",
       "automergeType": "branch"
-		},
-		{
+    },
+    {
       "description": "Automerge dev dependencies",
-			"matchDepTypes": ["devDependencies"],
-			"automerge": true,
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
       "automergeStrategy": "rebase",
       "automergeType": "branch"
-		},
+    },
     {
       "description": "Use ci semantic type for some deps",
       "matchFileNames": [".github/workflows/**"],

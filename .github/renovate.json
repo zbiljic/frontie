@@ -26,6 +26,15 @@
       "customType": "regex",
       "datasourceTemplate": "npm",
       "depNameTemplate": "bun",
+      "depTypeTemplate": "devDependencies",
+      "fileMatch": ["(^|/)package\\.json$"],
+      "matchStrings": ["bun-types\"\\:\\s*\"(?<currentValue>.*)\""],
+      "versioningTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "npm",
+      "depNameTemplate": "bun",
       "depTypeTemplate": "action",
       "fileMatch": ["(^|/)(\\.(?:github|gitea|forgejo))/renovate\\.json$"],
       "matchStrings": ["BUN_VERSION\\=v(?<currentValue>.*)\\s&&"],
@@ -59,8 +68,13 @@
       "semanticCommitType": "ci"
     },
     {
-      "description": "Ignore wait duration to pass for each separate version",
-      "matchPackageNames": ["bun"],
+      "description": "Update dev dependencies only weekly",
+      "extends": ["schedule:weekly"],
+      "matchDepTypes": ["devDependencies"]
+    },
+    {
+      "description": "Ignore wait duration for some packages",
+      "matchPackageNames": ["bun", "@biomejs/biome", "turbo"],
       "minimumReleaseAge": ""
     },
     {

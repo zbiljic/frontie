@@ -63,14 +63,15 @@
     },
     {
       "description": "Update the Renovate GitHub action weekly with fix type",
-      "extends": [":semanticCommitType(fix)", "schedule:weekly"],
+      "extends": [":semanticCommitType(fix)"],
       "matchPackageNames": "renovatebot/github-action",
-      "semanticCommitType": "ci"
+      "semanticCommitType": "ci",
+      "schedule": ["on Monday"]
     },
     {
       "description": "Update dev dependencies only weekly",
-      "extends": ["schedule:weekly"],
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "schedule": ["on Monday"]
     },
     {
       "description": "Ignore wait duration for some packages",

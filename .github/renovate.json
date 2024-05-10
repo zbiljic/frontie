@@ -89,7 +89,7 @@
       ],
       "postUpgradeTasks": {
         "commands": [
-          "BUN_VERSION=v1.1.7 && BUN_INSTALL=/home/ubuntu/.local bash -c \"$(curl -fsSL https://bun.sh/install)\" -- \"bun-$BUN_VERSION\" 2>/dev/null",
+          "BUN_VERSION=v1.1.8 && BUN_INSTALL=/home/ubuntu/.local bash -c \"$(curl -fsSL https://bun.sh/install)\" -- \"bun-$BUN_VERSION\" 2>/dev/null",
           "bun --revision",
           "bun install --silent",
           "bun run syncpack",

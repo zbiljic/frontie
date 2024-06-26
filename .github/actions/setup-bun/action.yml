@@ -9,7 +9,7 @@ runs:
         echo "BUN_VERSION=$(cat package.json | grep packageManager | head -1 | awk -F: '{ print $2 }' | sed 's/[,"bun@]//g')" >> ${GITHUB_ENV}
 
     - name: Install bun
-      uses: oven-sh/setup-bun@v1
+      uses: oven-sh/setup-bun@v2
       with:
         bun-version: ${{ env.BUN_VERSION }}
 

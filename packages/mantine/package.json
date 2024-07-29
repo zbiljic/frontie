@@ -31,7 +31,7 @@
     "@types/react-dom": "18.3.0",
     "bun-types": "1.1.21",
     "postcss": "8.4.40",
-    "postcss-preset-mantine": "1.16.0",
+    "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "7.0.1",
     "typescript": "5.5.4",
     "typescript-plugin-css-modules": "5.1.0"

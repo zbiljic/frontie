@@ -34,7 +34,7 @@
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "husky": "9.1.4",
-    "stylelint": "16.7.0",
+    "stylelint": "16.8.1",
     "stylelint-config-standard-scss": "13.1.0",
     "syncpack": "12.4.0",
     "turbo": "2.0.11"

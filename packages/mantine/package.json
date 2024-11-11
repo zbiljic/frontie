@@ -16,11 +16,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mantine/core": "7.13.4",
-    "@mantine/hooks": "7.13.4",
-    "@mantine/modals": "7.13.4",
-    "@mantine/notifications": "7.13.4",
-    "@mantine/vanilla-extract": "7.13.4",
+    "@mantine/core": "7.13.5",
+    "@mantine/hooks": "7.13.5",
+    "@mantine/modals": "7.13.5",
+    "@mantine/notifications": "7.13.5",
+    "@mantine/vanilla-extract": "7.13.5",
     "@tabler/icons-react": "3.21.0",
     "clsx": "2.1.1"
   },

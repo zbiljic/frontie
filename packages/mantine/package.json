@@ -28,7 +28,7 @@
     "@happy-dom/global-registrator": "15.11.7",
     "@tsconfig/create-react-app": "2.0.5",
     "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1",
+    "@types/react-dom": "19.0.2",
     "bun-types": "1.1.38",
     "postcss": "8.4.49",
     "postcss-preset-mantine": "1.17.0",

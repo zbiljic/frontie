@@ -21,7 +21,7 @@
     "@mantine/modals": "7.15.1",
     "@mantine/notifications": "7.15.1",
     "@mantine/vanilla-extract": "7.15.1",
-    "@tabler/icons-react": "3.25.0",
+    "@tabler/icons-react": "3.26.0",
     "clsx": "2.1.1"
   },
   "devDependencies": {

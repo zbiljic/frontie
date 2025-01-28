@@ -2,7 +2,7 @@
   "name": "frontie",
   "version": "0.0.0",
   "description": "Frontend Components Monorepo",
-  "packageManager": "bun@1.2.0",
+  "packageManager": "bun@1.2.1",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/zbiljic/frontie.git",

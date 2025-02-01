@@ -29,7 +29,7 @@
     "@tsconfig/create-react-app": "2.0.5",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "bun-types": "1.2.1",
+    "bun-types": "1.2.2",
     "postcss": "8.5.1",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "7.0.1",

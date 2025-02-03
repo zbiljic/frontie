@@ -25,7 +25,7 @@
     "clsx": "2.1.1"
   },
   "devDependencies": {
-    "@happy-dom/global-registrator": "16.7.3",
+    "@happy-dom/global-registrator": "16.8.1",
     "@tsconfig/create-react-app": "2.0.5",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",

@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "frontie",
+      "name": "@zbiljic/frontie",
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@commitlint/cli": "19.6.1",

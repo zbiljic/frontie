@@ -25,7 +25,7 @@ runs:
         cache-name: cache-node-modules
       with:
         path: ${{ steps.bun-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-bun-${{ env.cache-name }}-${{ hashFiles('**/bun.lockb') }}
+        key: ${{ runner.os }}-bun-${{ env.cache-name }}-${{ hashFiles('**/bun.lock') }}
         restore-keys: |
           ${{ runner.os }}-bun-${{ env.cache-name }}-
           ${{ runner.os }}-bun-

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "emitDeclarationOnly": true,
+    "stripInternal": true,
+    "outDir": "./dist/types"
+  }
+}

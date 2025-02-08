@@ -10,6 +10,7 @@
     "node": ">=22"
   },
   "workspaces": [
+    "libs/*",
     "packages/*"
   ],
   "scripts": {
@@ -33,6 +34,7 @@
     "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "19.7.1",
     "@commitlint/config-conventional": "19.7.1",
+    "del-cli": "6.0.0",
     "husky": "9.1.7",
     "stylelint": "16.14.1",
     "stylelint-config-standard-scss": "14.0.0",

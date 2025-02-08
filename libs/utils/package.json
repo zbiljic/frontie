@@ -1,0 +1,30 @@
+{
+  "name": "@zbiljic/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build.ts",
+    "clean": "del-cli -v ./dist",
+    "postinstall": "bun run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fetch-repo-dir": "1.0.6",
+    "fs-extra": "11.3.0",
+    "globby": "14.1.0",
+    "tsup": "8.3.6",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "1.0.7",
+    "@types/fs-extra": "11.0.4",
+    "bun-plugin-isolated-decl": "0.1.9",
+    "oxc-transform": "0.48.2",
+    "typescript": "5.7.3"
+  }
+}

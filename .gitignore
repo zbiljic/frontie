@@ -27,3 +27,8 @@ coverage
 
 # Miscellaneous
 .DS_Store
+
+# Directories
+**/dist
+**/src-gen
+**/tmp

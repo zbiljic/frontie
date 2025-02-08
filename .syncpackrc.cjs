@@ -2,7 +2,7 @@
 
 /** @type {import("syncpack").RcFile} */
 const config = {
-  source: ['package.json', 'apps/*/package.json', 'packages/*/package.json'],
+  source: ['package.json', '*/*/package.json'],
   sortFirst: [
     'name',
     'version',

@@ -1,0 +1,10 @@
+{
+  "extends": "@zbiljic/utils/tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src-gen/*"]
+    }
+  },
+  "include": ["src-gen"]
+}

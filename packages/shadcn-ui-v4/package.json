@@ -1,0 +1,63 @@
+{
+  "name": "@zbiljic/frontie-shadcn-ui-v4",
+  "version": "0.0.0",
+  "keywords": [
+    "@shadcn/ui",
+    "components",
+    "radix",
+    "radix-ui",
+    "react",
+    "shadcn-ui",
+    "tailwind",
+    "tailwindcss",
+    "ui"
+  ],
+  "repository": {
+    "url": "https://github.com/zbiljic/frontie.git",
+    "type": "git",
+    "directory": "packages/shadcn-ui-v4"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "source": {
+      "url": "https://github.com/shadcn-ui/ui#main",
+      "type": "git",
+      "directory": "apps/v4",
+      "use": {
+        "dependencies": [
+          "class-variance-authority",
+          "clsx",
+          "tailwind-merge"
+        ],
+        "devDependencies": [
+          "@types/react",
+          "@types/react-dom"
+        ],
+        "peerDependencies": [
+          "@radix-ui/react-icons",
+          "lucide-react",
+          "react",
+          "react-dom",
+          "tailwindcss"
+        ]
+      },
+      "ignore": [
+        "blocks",
+        "charts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "clean": "bun run reset && del-cli -v ./dist ./src-gen ./tmp",
+    "reset": "bun run build.reset.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@zbiljic/utils": "workspace:*"
+  }
+}

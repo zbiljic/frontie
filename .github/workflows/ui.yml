@@ -1,0 +1,126 @@
+name: UI
+
+on:
+  push:
+    branches:
+      - ui/**
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+  merge_group:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build_ui:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    name: Generate components
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract package from the branch name
+        run: |
+          UI_PACKAGE_WITH_REF="${GITHUB_REF_NAME#ui/}"
+
+          UI_PACKAGE=$(echo "$UI_PACKAGE_WITH_REF" | cut -d "/" -f 1)
+          UI_PACKAGE_REF=$(echo "$UI_PACKAGE_WITH_REF" | cut -d "/" -f 2)
+
+          echo "UI_PACKAGE=${UI_PACKAGE}" >> "$GITHUB_ENV"
+          echo "UI_PACKAGE_REF=${UI_PACKAGE_REF}" >> "$GITHUB_ENV"
+
+      - name: Check working directory
+        run: |
+          cd packages/${UI_PACKAGE}
+
+      - name: Switch to ref in package.json
+        run: |
+          sed -i -E 's/(url\"\:.+)(#)main/\1\2'${UI_PACKAGE_REF}'/' "packages/${UI_PACKAGE}/package.json"
+
+      - name: Install unzip
+        run: |
+          COMMAND_NAME="unzip"
+
+          # Check if the command exists
+          if ! command -v $COMMAND_NAME &> /dev/null; then
+              echo "$COMMAND_NAME could not be found, attempting to install it."
+
+              # Update package list and install the command
+              apt-get update
+              apt-get install -y $COMMAND_NAME
+
+              # Recheck if the command exists after attempting installation
+              if ! command -v $COMMAND_NAME &> /dev/null; then
+                  echo "Failed to install $COMMAND_NAME. Please install it manually."
+                  exit 1
+              else
+                  echo "$COMMAND_NAME was successfully installed."
+              fi
+          else
+              echo "$COMMAND_NAME is already installed."
+          fi
+
+      - name: Get Bun version from package.json
+        shell: bash
+        run: |
+          echo "BUN_VERSION=$(cat package.json | grep packageManager | head -1 | awk -F: '{ print $2 }' | sed 's/[,"bun@]//g')" >> ${GITHUB_ENV}
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build UI package
+        run: |
+          bun run --cwd "packages/${UI_PACKAGE}" build
+
+      - name: Finish changes
+        run: |
+          bun install
+
+      - name: Install git
+        run: |
+          COMMAND_NAME="git"
+
+          # Check if the command exists
+          if ! command -v $COMMAND_NAME &> /dev/null; then
+              echo "$COMMAND_NAME could not be found, attempting to install it."
+
+              # Update package list and install the command
+              apt-get update
+              apt-get install -y $COMMAND_NAME
+
+              # Recheck if the command exists after attempting installation
+              if ! command -v $COMMAND_NAME &> /dev/null; then
+                  echo "Failed to install $COMMAND_NAME. Please install it manually."
+                  exit 1
+              else
+                  echo "$COMMAND_NAME was successfully installed."
+              fi
+          else
+              echo "$COMMAND_NAME is already installed."
+          fi
+
+      - name: Add generated files to git
+        run: |
+          git add --force "packages/${UI_PACKAGE}/dist"
+          git add --force "packages/${UI_PACKAGE}/src-gen"
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore(ui): generate components"
+          commit_user_name: GitHub Actions
+          commit_user_email: actions@github.com

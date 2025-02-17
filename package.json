@@ -37,6 +37,6 @@
     "stylelint": "16.14.1",
     "stylelint-config-standard-scss": "14.0.0",
     "syncpack": "13.0.2",
-    "turbo": "2.4.1"
+    "turbo": "2.4.2"
   }
 }

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "bun run build.ts",
-    "clean": "del-cli -v ./dist",
+    "clean": "shx rm -rf ./dist",
     "postinstall": "bun run build",
     "typecheck": "tsc --noEmit"
   },

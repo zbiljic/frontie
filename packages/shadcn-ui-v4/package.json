@@ -53,7 +53,7 @@
   },
   "scripts": {
     "build": "bun run build.ts",
-    "clean": "bun run reset && del-cli -v ./dist ./src-gen ./tmp",
+    "clean": "bun run reset && shx rm -rf ./dist ./src-gen ./tmp",
     "reset": "bun run build.reset.ts"
   },
   "dependencies": {},

@@ -14,7 +14,8 @@
     "packages/*"
   ],
   "scripts": {
-    "biome:apply": "biome check --apply *",
+    "biome:apply": "biome check --write *",
+    "biome:apply:unsafe": "biome check --write --unsafe *",
     "biome:check": "biome check *",
     "biome:ci": "biome ci *",
     "biome:format": "biome format --write *",
@@ -22,11 +23,11 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "lint": "turbo run lint",
+    "pkg": "syncpack list-mismatches",
+    "pkg:check": "syncpack lint",
+    "pkg:fix": "syncpack format && syncpack fix-mismatches",
+    "pkg:update": "syncpack update",
     "prepare": "husky",
-    "stylelint": "stylelint \"**/*.css\" --cache",
-    "syncpack": "syncpack list-mismatches",
-    "syncpack:format": "syncpack format",
-    "syncpack:update": "syncpack update",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },

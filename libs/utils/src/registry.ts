@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-const SHADCN_UI_REGISTRY_ENDPOINT = 'https://ui.shadcn.com/registry';
+export const SHADCN_UI_REGISTRY_ENDPOINT = 'https://ui.shadcn.com/registry';
 
 const fetchRegistry = async (
-  endpoint: string | undefined,
+  endpoint: string,
+  path: string | undefined,
+  item: string | undefined,
   schema: z.ZodTypeAny,
   // biome-ignore lint/suspicious/noExplicitAny: library
 ): Promise<any> => {
   const response = await fetch(
-    [SHADCN_UI_REGISTRY_ENDPOINT, endpoint, 'index.json']
-      .filter(Boolean)
-      .join('/'),
+    [endpoint, path, `${item}.json`].filter(Boolean).join('/')
   );
   const resultJson = await response.json();
 
@@ -24,9 +24,13 @@ class Component {
   type: string;
 }
 
-const fetchComponents = async (): Promise<Component[]> =>
+const fetchComponents = async (
+  endpoint: string | undefined = SHADCN_UI_REGISTRY_ENDPOINT
+): Promise<Component[]> =>
   fetchRegistry(
+    endpoint,
     undefined,
+    'index',
     z.array(
       z.object({
         dependencies: z.array(z.string()).optional(),
@@ -42,9 +46,13 @@ class Style {
   name: string;
 }
 
-const fetchStyles = async (): Promise<Style[]> =>
+const fetchStyles = async (
+  endpoint: string | undefined = SHADCN_UI_REGISTRY_ENDPOINT
+): Promise<Style[]> =>
   fetchRegistry(
+    endpoint,
     'styles',
+    'index',
     z.array(
       z.object({
         label: z.string(),

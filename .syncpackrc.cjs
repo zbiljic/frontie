@@ -68,6 +68,22 @@ const config = {
       isBanned: true,
     },
   ],
+  semverGroups: [
+    {
+      label: 'Expect Node to be at least some version',
+      range: '>=',
+      dependencyTypes: ['engines'],
+      dependencies: ['node'],
+      packages: ['**'],
+    },
+    {
+      label: 'Pin other dependencies to exact versions',
+      range: '',
+      dependencies: ['**'],
+      packages: ['**'],
+      specifierTypes: ['!file', '!hosted-git', '!url'],
+    },
+  ],
 };
 
 module.exports = config;

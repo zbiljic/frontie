@@ -6,9 +6,6 @@ on:
       - ui/**
     paths-ignore:
       - "**.md"
-  pull_request:
-    paths-ignore:
-      - "**.md"
   merge_group:
   workflow_dispatch:
 

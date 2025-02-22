@@ -1,5 +1,6 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
+import Bun from 'bun';
 // @ts-ignore
 import fetchRepoDir from 'fetch-repo-dir';
 import {
@@ -21,7 +22,7 @@ const getDirectories = async (source: string): Promise<string[]> =>
 const workDirectories = ['dist', 'src-gen', 'tmp'];
 const workFilesPatterns = ['*.backup'];
 
-const reset = async (workDir: string): Promise<void> => {
+const reset = (workDir: string): void => {
   console.log('resetting');
 
   const packageJsonBackupPath = join(workDir, 'package.json.backup');
@@ -125,7 +126,7 @@ const installDependencies = async (workDir: string): Promise<void> => {
     workDir,
     'tmp/source',
     packageConfig.source.directory || '',
-    'package.json',
+    'package.json'
   );
 
   if (!pathExistsSync(sourcePackageJsonPath)) {
@@ -166,7 +167,7 @@ const updateComponents = async (workDir: string): Promise<void> => {
   const sourceDirPath = join(
     workDir,
     'tmp/source',
-    packageConfig.source.directory || '',
+    packageConfig.source.directory || ''
   );
   const sourcePackageJsonPath = join(sourceDirPath, 'package.json');
 
@@ -197,7 +198,7 @@ const updateComponents = async (workDir: string): Promise<void> => {
     workDir,
     'tmp/source',
     packageConfig.source.directory || '',
-    'registry',
+    'registry'
   );
 
   const styles = await getDirectories(registryDir);
@@ -224,7 +225,7 @@ const updateComponents = async (workDir: string): Promise<void> => {
 
   await writeFile(
     stylesFile,
-    `export const styles = ${JSON.stringify(styles, undefined, 2)};`,
+    `export const styles = ${JSON.stringify(styles, undefined, 2)};`
   );
 
   for (const name of styles) {
@@ -258,7 +259,7 @@ const updateComponentPaths = async (workDir: string): Promise<void> => {
     workDir,
     'tmp/source',
     packageConfig.source.directory || '',
-    'registry',
+    'registry'
   );
 
   const styles = await getDirectories(registryDir);
@@ -277,7 +278,7 @@ const updateComponentPaths = async (workDir: string): Promise<void> => {
         for (const name of styles) {
           contents = contents.replaceAll(
             `@/registry/${name}/`,
-            `@/components/${name}/`,
+            `@/components/${name}/`
           );
         }
 
@@ -291,7 +292,7 @@ const updateComponentPaths = async (workDir: string): Promise<void> => {
         }
 
         await writeFile(path, contents);
-      }),
+      })
   );
 
   const libDir = join(workDir, 'src-gen', 'lib');
@@ -307,7 +308,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const CONTENT = "./node_modules/${packageObject.name}/dist/cjs/components/**/*.js" as const;
-`,
+`
   );
 };
 
@@ -335,7 +336,7 @@ const updatePackageJson = async (workDir: string): Promise<void> => {
         const withoutDistribution = path.replace('dist/cjs/', '');
         const withoutDistributionAndExtension = withoutDistribution.replace(
           /\.js$/u,
-          '',
+          ''
         );
         const cjsPath = `./${path}`;
         const esmPath = `./dist/esm/${withoutDistributionAndExtension}.mjs`;
@@ -344,7 +345,7 @@ const updatePackageJson = async (workDir: string): Promise<void> => {
         return [
           `./${withoutDistributionAndExtension.replace('/ui/', '/')}`.replace(
             './index',
-            '.',
+            '.'
           ),
           {
             import: esmPath,
@@ -352,7 +353,7 @@ const updatePackageJson = async (workDir: string): Promise<void> => {
             types: typesPath,
           },
         ];
-      }),
+      })
   );
 
   packageObject.typesVersions = {
@@ -361,7 +362,7 @@ const updatePackageJson = async (workDir: string): Promise<void> => {
         key.replace('./', ''),
         // @ts-ignore
         [value.types.replace('./', '')],
-      ]),
+      ])
     ),
   };
 

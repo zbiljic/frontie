@@ -6,7 +6,7 @@ const fetchRegistry = async (
   endpoint: string,
   path: string | undefined,
   item: string | undefined,
-  schema: z.ZodTypeAny,
+  schema: z.ZodTypeAny
   // biome-ignore lint/suspicious/noExplicitAny: library
 ): Promise<any> => {
   const response = await fetch(
@@ -37,8 +37,8 @@ const fetchComponents = async (
         files: z.array(z.string()),
         name: z.string(),
         type: z.string(),
-      }),
-    ),
+      })
+    )
   );
 
 class Style {
@@ -57,8 +57,8 @@ const fetchStyles = async (
       z.object({
         label: z.string(),
         name: z.string(),
-      }),
-    ),
+      })
+    )
   );
 
 export { fetchComponents, fetchRegistry, fetchStyles };

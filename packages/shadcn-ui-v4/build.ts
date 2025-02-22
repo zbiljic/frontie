@@ -12,7 +12,7 @@ import {
 
 const workDir = process.cwd();
 
-await reset(workDir);
+reset(workDir);
 if (!import.meta.env.SKIP_CLEAN) {
   await clean(workDir);
 }

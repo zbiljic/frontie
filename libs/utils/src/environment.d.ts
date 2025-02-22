@@ -1,4 +1,5 @@
 declare global {
+  // biome-ignore lint/style/noNamespace: library
   namespace NodeJS {
     interface ProcessEnv {
       FORCE_FETCH?: string;

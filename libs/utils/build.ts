@@ -1,4 +1,5 @@
 import type { BuildConfig } from 'bun';
+import Bun from 'bun';
 import isolatedDecl from 'bun-plugin-isolated-decl';
 import { globby } from 'globby';
 
@@ -10,7 +11,7 @@ const defaultBuildConfig: BuildConfig = {
   entrypoints: entrypoints,
   root: 'src',
   outdir: './dist',
-  target: 'node',
+  target: 'bun', // 'node'
   plugins: [
     isolatedDecl({
       forceGenerate: true,

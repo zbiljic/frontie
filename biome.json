@@ -3,5 +3,16 @@
   "extends": ["ultracite"],
   "formatter": {
     "ignore": ["**/package.json", "**/tmp/**"]
+  },
+  "linter": {
+    "rules": {
+      "performance": {
+        "useTopLevelRegex": "off"
+      },
+      "suspicious": {
+        "noConsole": "off",
+        "noConsoleLog": "off"
+      }
+    }
   }
 }

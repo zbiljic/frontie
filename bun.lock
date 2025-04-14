@@ -32,7 +32,7 @@
         "@types/fs-extra": "11.0.4",
         "bun-plugin-isolated-decl": "0.1.10",
         "oxc-transform": "0.62.0",
-        "typescript": "5.8.2",
+        "typescript": "5.8.3",
       },
     },
     "packages/shadcn-ui-v4": {
@@ -828,7 +828,7 @@
 
     "turbo-windows-arm64": ["turbo-windows-arm64@2.5.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-OUHCV+ueXa3UzfZ4co/ueIHgeq9B2K48pZwIxKSm5VaLVuv8M13MhM7unukW09g++dpdrrE1w4IOVgxKZ0/exg=="],
 
-    "typescript": ["typescript@5.8.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ=="],
+    "typescript": ["typescript@5.8.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
 
     "ultracite": ["ultracite@4.2.1", "", { "dependencies": { "commander": "^12.1.0" }, "bin": { "ultracite": "scripts/run.mjs" } }, "sha512-xQjwWscDOpiBF6z6hKPOJSQrNgLXJOTZ738NUym58aqUbam0xB9trVZlG5td3LjmE98Z7qjpnspDxr3lwlLkAA=="],
 

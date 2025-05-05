@@ -11,7 +11,7 @@
         "shx": "0.4.0",
         "stylelint": "16.19.1",
         "stylelint-config-standard-scss": "14.0.0",
-        "syncpack": "13.0.3",
+        "syncpack": "13.0.4",
         "turbo": "2.5.2",
         "ultracite": "4.2.1",
       },
@@ -109,8 +109,6 @@
     "@csstools/selector-specificity": ["@csstools/selector-specificity@5.0.0", "", { "peerDependencies": { "postcss-selector-parser": "^7.0.0" } }, "sha512-PCqQV3c4CoVm3kdPhyeZ07VmBRdH2EpMFA/pd9OASpOEC3aXNGoqPDAZ80D0cLpMBxnmk0+yNhGsEx31hq7Gtw=="],
 
     "@dual-bundle/import-meta-resolve": ["@dual-bundle/import-meta-resolve@4.1.0", "", {}, "sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg=="],
-
-    "@effect/schema": ["@effect/schema@0.75.5", "", { "dependencies": { "fast-check": "^3.21.0" }, "peerDependencies": { "effect": "^3.9.2" } }, "sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw=="],
 
     "@emnapi/core": ["@emnapi/core@1.4.0", "", { "dependencies": { "@emnapi/wasi-threads": "1.0.1", "tslib": "^2.4.0" } }, "sha512-H+N/FqT07NmLmt6OFFtDfwe8PNygprzBikrEMyQfgqSmT0vzE515Pz7R8izwB9q/zsH/MA64AKoul3sA6/CzVg=="],
 
@@ -776,7 +774,7 @@
 
     "svg-tags": ["svg-tags@1.0.0", "", {}, "sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA=="],
 
-    "syncpack": ["syncpack@13.0.3", "", { "dependencies": { "@effect/schema": "^0.75.5", "chalk": "^5.4.1", "chalk-template": "^1.1.0", "commander": "^13.1.0", "cosmiconfig": "^9.0.0", "effect": "^3.13.7", "enquirer": "^2.4.1", "fast-check": "^3.23.2", "globby": "^14.1.0", "jsonc-parser": "^3.3.1", "minimatch": "9.0.5", "npm-package-arg": "^12.0.2", "ora": "^8.2.0", "prompts": "^2.4.2", "read-yaml-file": "^2.1.0", "semver": "^7.7.1", "tightrope": "0.2.0", "ts-toolbelt": "^9.6.0" }, "bin": { "syncpack": "dist/bin.js", "syncpack-fix-mismatches": "dist/bin-fix-mismatches/index.js", "syncpack-format": "dist/bin-format/index.js", "syncpack-lint": "dist/bin-lint/index.js", "syncpack-lint-semver-ranges": "dist/bin-lint-semver-ranges/index.js", "syncpack-list": "dist/bin-list/index.js", "syncpack-list-mismatches": "dist/bin-list-mismatches/index.js", "syncpack-prompt": "dist/bin-prompt/index.js", "syncpack-set-semver-ranges": "dist/bin-set-semver-ranges/index.js", "syncpack-update": "dist/bin-update/index.js" } }, "sha512-ZKrdDVmOUBWeaTVaxRnfwtqBJ5rMzMo7Lfdp04wtORwHEcvrq6M+NzCwS4PPIhTucD005wD8wumy90Ucz3lwXg=="],
+    "syncpack": ["syncpack@13.0.4", "", { "dependencies": { "chalk": "^5.4.1", "chalk-template": "^1.1.0", "commander": "^13.1.0", "cosmiconfig": "^9.0.0", "effect": "^3.13.7", "enquirer": "^2.4.1", "fast-check": "^3.23.2", "globby": "^14.1.0", "jsonc-parser": "^3.3.1", "minimatch": "9.0.5", "npm-package-arg": "^12.0.2", "ora": "^8.2.0", "prompts": "^2.4.2", "read-yaml-file": "^2.1.0", "semver": "^7.7.1", "tightrope": "0.2.0", "ts-toolbelt": "^9.6.0" }, "bin": { "syncpack": "dist/bin.js", "syncpack-fix-mismatches": "dist/bin-fix-mismatches/index.js", "syncpack-format": "dist/bin-format/index.js", "syncpack-lint": "dist/bin-lint/index.js", "syncpack-lint-semver-ranges": "dist/bin-lint-semver-ranges/index.js", "syncpack-list": "dist/bin-list/index.js", "syncpack-list-mismatches": "dist/bin-list-mismatches/index.js", "syncpack-prompt": "dist/bin-prompt/index.js", "syncpack-set-semver-ranges": "dist/bin-set-semver-ranges/index.js", "syncpack-update": "dist/bin-update/index.js" } }, "sha512-kJ9VlRxNCsBD5pJAE29oXeBYbPLhEySQmK4HdpsLv81I6fcDDW17xeJqMwiU3H7/woAVsbgq25DJNS8BeiN5+w=="],
 
     "table": ["table@6.9.0", "", { "dependencies": { "ajv": "^8.0.1", "lodash.truncate": "^4.4.2", "slice-ansi": "^4.0.0", "string-width": "^4.2.3", "strip-ansi": "^6.0.1" } }, "sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A=="],
 

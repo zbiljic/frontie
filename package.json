@@ -38,7 +38,7 @@
     "husky": "9.1.7",
     "shx": "0.4.0",
     "stylelint": "16.19.1",
-    "stylelint-config-standard-scss": "14.0.0",
+    "stylelint-config-standard-scss": "15.0.1",
     "syncpack": "13.0.4",
     "turbo": "2.5.3",
     "ultracite": "4.2.5"

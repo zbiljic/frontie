@@ -18,7 +18,7 @@
     "fs-extra": "11.3.0",
     "globby": "14.1.0",
     "tsup": "8.5.0",
-    "zod": "3.24.4"
+    "zod": "3.25.56"
   },
   "devDependencies": {
     "@tsconfig/bun": "1.0.8",

@@ -13,7 +13,7 @@
         "stylelint-config-standard-scss": "15.0.1",
         "syncpack": "13.0.4",
         "turbo": "2.5.4",
-        "ultracite": "4.2.5",
+        "ultracite": "4.2.8",
       },
     },
     "libs/utils": {
@@ -854,7 +854,7 @@
 
     "ufo": ["ufo@1.6.1", "", {}, "sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA=="],
 
-    "ultracite": ["ultracite@4.2.5", "", { "dependencies": { "commander": "^12.1.0" }, "bin": { "ultracite": "scripts/run.mjs" } }, "sha512-WSJXX6dpSC+fhPQHAQn7jxtgxU9ueujQ3DZTVfzOUdmmvIm/i6v0/WlUyCDYZbzJup+pC8vUzi+XUJLRbN52HQ=="],
+    "ultracite": ["ultracite@4.2.8", "", { "dependencies": { "commander": "^14.0.0" }, "bin": { "ultracite": "scripts/run.mjs" } }, "sha512-zdt8FA190RGF0QE025WO4uGJGrglb1hZJmSkflRDf0lWyfGnEA69aQKy5005OvoTFh7P6ebGWVI+YbQLOUMxlQ=="],
 
     "undici-types": ["undici-types@5.26.5", "", {}, "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA=="],
 
@@ -958,7 +958,7 @@
 
     "tsup/tinyexec": ["tinyexec@0.3.2", "", {}, "sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA=="],
 
-    "ultracite/commander": ["commander@12.1.0", "", {}, "sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA=="],
+    "ultracite/commander": ["commander@14.0.0", "", {}, "sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA=="],
 
     "unplugin/picomatch": ["picomatch@4.0.2", "", {}, "sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg=="],
 

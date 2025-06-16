@@ -41,6 +41,6 @@
     "stylelint-config-standard-scss": "15.0.1",
     "syncpack": "13.0.4",
     "turbo": "2.5.4",
-    "ultracite": "4.2.8"
+    "ultracite": "4.2.10"
   }
 }

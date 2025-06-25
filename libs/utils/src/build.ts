@@ -1,7 +1,7 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import Bun from 'bun';
-// @ts-ignore
+// @ts-expect-error
 import fetchRepoDir from 'fetch-repo-dir';
 import {
   copySync,
@@ -42,14 +42,17 @@ const clean = async (workDir: string): Promise<void> => {
       continue;
     }
     console.log(`removing ${p}`);
+    // biome-ignore lint/nursery/noAwaitInLoop: utils
     await Bun.$`rm -rf ${p}`;
   }
 
   console.log('removing work files');
   for (const workFilePattern of workFilesPatterns) {
+    // biome-ignore lint/nursery/noAwaitInLoop: utils
     const workFiles = await globby(join(workDir, workFilePattern));
     for (const workFile of workFiles) {
       console.log(`removing ${workFile}`);
+      // biome-ignore lint/nursery/noAwaitInLoop: utils
       await Bun.$`rm -rf ${workFile}`;
     }
   }
@@ -218,6 +221,7 @@ const updateComponents = async (workDir: string): Promise<void> => {
       continue;
     }
 
+    // biome-ignore lint/nursery/noAwaitInLoop: utils
     await Bun.$`bun install --cwd ${workDir} ${depWithVersion}`;
   }
 
@@ -360,7 +364,7 @@ const updatePackageJson = async (workDir: string): Promise<void> => {
     '*': Object.fromEntries(
       Object.entries(packageObject.exports).map(([key, value]) => [
         key.replace('./', ''),
-        // @ts-ignore
+        // @ts-expect-error
         [value.types.replace('./', '')],
       ])
     ),

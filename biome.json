@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite"],
   "formatter": {
-    "ignore": ["**/package.json", "**/tmp/**"]
+    "includes": ["**", "!**/package.json", "!**/tmp/**"]
   },
   "linter": {
     "rules": {
@@ -10,8 +10,7 @@
         "useTopLevelRegex": "off"
       },
       "suspicious": {
-        "noConsole": "off",
-        "noConsoleLog": "off"
+        "noConsole": "off"
       }
     }
   }

@@ -8,7 +8,7 @@ await Bun.$`rm -rf ./dist`;
 const entrypoints = await globby('./src/**/*.ts');
 
 const defaultBuildConfig: BuildConfig = {
-  entrypoints: entrypoints,
+  entrypoints,
   root: 'src',
   outdir: './dist',
   target: 'bun', // 'node'

@@ -13,7 +13,7 @@
         "stylelint-config-standard-scss": "15.0.1",
         "syncpack": "13.0.4",
         "turbo": "2.5.4",
-        "ultracite": "5.0.19",
+        "ultracite": "5.0.25",
       },
     },
     "libs/utils": {
@@ -916,7 +916,7 @@
 
     "ufo": ["ufo@1.6.1", "", {}, "sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA=="],
 
-    "ultracite": ["ultracite@5.0.19", "", { "dependencies": { "@clack/prompts": "^0.11.0", "commander": "^14.0.0", "deepmerge": "^4.3.1", "jsonc-parser": "^3.3.1", "vitest": "^3.2.4" }, "bin": { "ultracite": "dist/index.js" } }, "sha512-dfsNyOLsEM2OGupKK8DBY/On+hVTWpoEMHX5Rlv/kRwnNUB6U1a3XA5My7dpRWbHLfeB0Ar3e7qypPBKT+pOJg=="],
+    "ultracite": ["ultracite@5.0.25", "", { "dependencies": { "@clack/prompts": "^0.11.0", "commander": "^14.0.0", "deepmerge": "^4.3.1", "jsonc-parser": "^3.3.1", "vitest": "^3.2.4" }, "bin": { "ultracite": "dist/index.js" } }, "sha512-IWIHQvPRxIf+7+YEt9pDmCV60w9baCswWvRhoP8SQwJaJUFC9OF5fBfGBdMhv6lpdIJfgyCDj7H7uEcnT4QxRw=="],
 
     "undici-types": ["undici-types@5.26.5", "", {}, "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA=="],
 

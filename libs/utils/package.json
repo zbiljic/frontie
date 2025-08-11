@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "fetch-repo-dir": "1.0.6",
-    "fs-extra": "11.3.0",
+    "fs-extra": "11.3.1",
     "globby": "14.1.0",
     "tsup": "8.5.0",
     "zod": "4.0.14"

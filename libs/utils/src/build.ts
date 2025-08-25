@@ -42,17 +42,14 @@ const clean = async (workDir: string): Promise<void> => {
       continue;
     }
     console.log(`removing ${p}`);
-    // biome-ignore lint/nursery/noAwaitInLoop: utils
     await Bun.$`rm -rf ${p}`;
   }
 
   console.log('removing work files');
   for (const workFilePattern of workFilesPatterns) {
-    // biome-ignore lint/nursery/noAwaitInLoop: utils
     const workFiles = await globby(join(workDir, workFilePattern));
     for (const workFile of workFiles) {
       console.log(`removing ${workFile}`);
-      // biome-ignore lint/nursery/noAwaitInLoop: utils
       await Bun.$`rm -rf ${workFile}`;
     }
   }
@@ -221,7 +218,6 @@ const updateComponents = async (workDir: string): Promise<void> => {
       continue;
     }
 
-    // biome-ignore lint/nursery/noAwaitInLoop: utils
     await Bun.$`bun install --cwd ${workDir} ${depWithVersion}`;
   }
 

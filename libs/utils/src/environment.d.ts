@@ -1,11 +1,11 @@
 declare global {
   // biome-ignore lint/style/noNamespace: library
   namespace NodeJS {
-    interface ProcessEnv {
+    type ProcessEnv = {
       FORCE_FETCH?: string;
       SKIP_CLEAN?: string;
       SKIP_UPDATE?: string;
-    }
+    };
   }
 }
 

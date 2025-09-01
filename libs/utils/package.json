@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@tsconfig/bun": "1.0.8",
-    "@types/bun": "1.2.20",
+    "@types/bun": "1.2.21",
     "@types/fs-extra": "11.0.4",
     "bun-plugin-isolated-decl": "0.2.6",
     "oxc-transform": "0.82.3",

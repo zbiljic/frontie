@@ -24,7 +24,7 @@
     "@tsconfig/bun": "1.0.8",
     "@types/bun": "1.2.21",
     "@types/fs-extra": "11.0.4",
-    "bun-plugin-isolated-decl": "0.2.6",
+    "bun-plugin-isolated-decl": "0.2.8",
     "oxc-transform": "0.82.3",
     "typescript": "5.9.2"
   }

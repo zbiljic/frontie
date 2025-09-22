@@ -25,7 +25,7 @@
     "@types/bun": "1.2.22",
     "@types/fs-extra": "11.0.4",
     "bun-plugin-isolated-decl": "0.2.8",
-    "oxc-transform": "0.87.0",
+    "oxc-transform": "0.90.0",
     "typescript": "5.9.2"
   }
 }

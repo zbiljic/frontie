@@ -4,6 +4,11 @@
   "formatter": {
     "includes": ["**", "!**/package.json", "!**/tmp/**"]
   },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
   "linter": {
     "rules": {
       "performance": {

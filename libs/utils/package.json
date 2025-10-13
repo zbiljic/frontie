@@ -21,7 +21,7 @@
     "zod": "4.1.11"
   },
   "devDependencies": {
-    "@tsconfig/bun": "1.0.8",
+    "@tsconfig/bun": "1.0.9",
     "@types/bun": "1.2.23",
     "@types/fs-extra": "11.0.4",
     "bun-plugin-isolated-decl": "0.2.8",

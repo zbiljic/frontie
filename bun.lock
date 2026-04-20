@@ -33,7 +33,7 @@
         "@types/fs-extra": "11.0.4",
         "bun-plugin-isolated-decl": "0.2.9",
         "oxc-transform": "0.123.0",
-        "typescript": "6.0.2",
+        "typescript": "6.0.3",
       },
     },
     "packages/shadcn-ui-v4": {
@@ -865,7 +865,7 @@
 
     "turbo": ["turbo@2.9.6", "", { "optionalDependencies": { "@turbo/darwin-64": "2.9.6", "@turbo/darwin-arm64": "2.9.6", "@turbo/linux-64": "2.9.6", "@turbo/linux-arm64": "2.9.6", "@turbo/windows-64": "2.9.6", "@turbo/windows-arm64": "2.9.6" }, "bin": { "turbo": "bin/turbo" } }, "sha512-+v2QJey7ZUeUiuigkU+uFfklvNUyPI2VO2vBpMYJA+a1hKFLFiKtUYlRHdb3P9CrAvMzi0upbjI4WT+zKtqkBg=="],
 
-    "typescript": ["typescript@6.0.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ=="],
+    "typescript": ["typescript@6.0.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw=="],
 
     "ufo": ["ufo@1.6.1", "", {}, "sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA=="],
 

@@ -40,7 +40,7 @@
     "stylelint": "17.14.1",
     "stylelint-config-standard-scss": "17.0.0",
     "syncpack": "13.0.4",
-    "turbo": "2.10.9",
+    "turbo": "2.10.10",
     "ultracite": "6.5.1"
   }
 }
